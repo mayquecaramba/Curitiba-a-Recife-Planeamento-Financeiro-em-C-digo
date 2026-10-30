@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard de Viagem: Curitiba x Recife</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fonte Inter do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="dashboard-container">
+    
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+      <div>
+        <h1>✈️ Cronograma de Viagem</h1>
+        <p class="subtitle">Planejamento financeiro: Curitiba ➔ Recife</p>
+      </div>
+      <div class="badge-status">Status: Planejado</div>
+    </header>
+
+    <!-- Cartões de Resumo (KPIs) -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-title">Custo Total</span>
+        <span class="kpi-value" id="total-value">R$ 0,00</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-title">Maior Despesa</span>
+        <span class="kpi-value" id="highest-expense">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-title">Categorias</span>
+        <span class="kpi-value" id="total-categories">0</span>
+      </div>
+    </section>
+
+    <!-- Seção do Gráfico -->
+    <section class="chart-section">
+      <div class="section-header">
+        <h2>Distribuição de Custos por Categoria</h2>
+      </div>
+      <div class="chart-container">
+        <canvas id="viagemChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Tabela Detalhada -->
+    <section class="table-section">
+      <div class="section-header">
+        <h2>Detalhamento dos Gastos</h2>
+      </div>
+      <div class="table-wrapper">
+        <table id="detalhes-tabela">
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Preço Unitário</th>
+              <th>Qtd.</th>
+              <th>Valor Final</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Preenchido via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
